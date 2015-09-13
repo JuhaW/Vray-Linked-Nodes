@@ -1,20 +1,20 @@
 bl_info = {
-    "name": "Vray Linked nodes",
-    "description": " Label based linked nodes for Vray",
-    "author": "Juha W",
-    "version": (1, 0),
-    "blender": (2, 75, 0),
-    "location": "Node Editor > Tools",
-    "warning": "",
-    "wiki_url": "",
-    "tracker_url": "",
-    "category": "Node"}
+	"name": "Vray Linked nodes",
+	"description": " Label based linked nodes for Vray",
+	"author": "Juha W",
+	"version": (1, 0),
+	"blender": (2, 75, 0),
+	"location": "Node Editor > Tools",
+	"warning": "",
+	"wiki_url": "",
+	"tracker_url": "",
+	"category": "Node"}
 
 if "bpy" in locals():
-    import imp
-    imp.reload(Linked_Nodes)
+	import imp
+	imp.reload(Linked_Nodes)
 else:
-    from . LinkedNodes import Linked_Nodes as f
+	from . LinkedNodes import Linked_Nodes as f
 
 import bpy
 
