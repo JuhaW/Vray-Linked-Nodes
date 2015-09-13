@@ -291,14 +291,3 @@ def node_copy(copy_update_paste_pastelink):
 
 	return len(sel_nodes)
 
-#for i,a in enumerate(attributes):
-#	print(i,a)
-
-################################################
-#node_copy(True)
-#node_copy(False)
-
-#nodetypes have image texture
-#
-#BitmapBuffer
-

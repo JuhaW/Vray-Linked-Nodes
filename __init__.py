@@ -10,19 +10,13 @@ bl_info = {
     "tracker_url": "",
     "category": "Node"}
 
+if "bpy" in locals():
+    import imp
+    imp.reload(Linked_Nodes)
+else:
+    from . LinkedNodes import Linked_Nodes as f
 
 import bpy
-import sys
-import os.path
-import importlib
-
-sys.path.append('C:\Vray addons\VrayLinkedNodes')
-os.path.join('C:\Vray addons\VrayLinkedNodes')
-
-from LinkedNodes import Linked_Nodes as f
-importlib.reload(f)
-
-#from ReloadScript import Reload_Script as r
 
 ###########################################################
 
@@ -100,7 +94,6 @@ class Nnodes_pickdata(bpy.types.Operator):
 		return {'FINISHED'}
 
 #################################################################
-
 
 class Nnodes_copy(bpy.types.Operator):
 	bl_idname = 'nodes.copy'
