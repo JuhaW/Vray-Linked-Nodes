@@ -19,24 +19,25 @@ Remap
 -
 Buttons:
 -
-Link
+Link -
 Link all selected nodes, active node is the source node
 
-UnLink
+UnLink -
 UnLink all selected nodes
 
-Copy Node Data
+Copy Node Data -
 Copy active node values, nothing visual
 
-Paste Node Data
+Paste Node Data -
 Paste copied node values to selected nodes, no linking
 
-Paste+Link Data
+Paste+Link Data -
 Paste copied node values to selected nodes + link them
 
-Update Node
+Update Node -
 Updates nodes which are linked to active node
 
+-
 Paste Node Data and Paste+Link Data buttons are mainly to paste/link node values to another material nodes
 
 -
