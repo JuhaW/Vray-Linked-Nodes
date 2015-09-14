@@ -45,5 +45,5 @@ Paste Node Data and Paste+Link Data buttons are mainly to paste/link node values
 You can also copy/paste (Ctrl+C, Ctrl+V) nodes between materials in normal way, if nodes are set to link, then pasted nodes are also linked.
 
 Cons:
-Uses node labels to link nodes so dont change them
-Might crash Blender, no node type checks yet
+Uses node labels to link nodes so dont change them.
+Might crash Blender, no node type checks yet.
