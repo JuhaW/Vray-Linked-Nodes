@@ -47,6 +47,14 @@ def node_unlink():
 
 ################################################
 
+def node_label_change(act_node):
+
+	if act_node.label == "":  #change label only if active node label is empty
+		act_node.label = "|Link|" + str(bpy.context.scene.linkcount) + act_node.name
+		bpy.context.scene.linkcount += 1
+
+################################################
+
 def node_label_search_all(act_node):
 
 	#loop all nodes
@@ -177,10 +185,9 @@ def node_copy(copy_update_paste_pastelink):
 		sel_nodes = selected_nodes_from_one_material()
 		#act_node.label = "|Link|" + str(bpy.context.scene.linkcount) + act_node.name
 		#bpy.context.scene.linkcount += 1
-		if copy_update_paste_pastelink == 3:
-			#change label
-			act_node.label = "|Link|" + str(bpy.context.scene.linkcount) + act_node.name
-			bpy.context.scene.linkcount += 1
+		if copy_update_paste_pastelink == 3: #pastelink
+			node_label_change(act_node)
+
 	#Update
 	elif copy_update_paste_pastelink == 1:
 
@@ -194,12 +201,8 @@ def node_copy(copy_update_paste_pastelink):
 			#print ("label is empty")
 			return
 	else:#Copy
-		if act_node.label == "":  #change label only if active node label is empty
-			act_node.label = "|Link|" + str(bpy.context.scene.linkcount) + act_node.name
-			bpy.context.scene.linkcount += 1
-		else:
-			#print ("node label is not empty")
-			pass
+		node_label_change(act_node)
+		
 		nodes = bpy.data.node_groups[mat.name].nodes
 		sel_nodes = selected_nodes(act_node,nodes)
 		#print ("sel_node.name:",sel_nodes)
